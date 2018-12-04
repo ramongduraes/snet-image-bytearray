@@ -1,0 +1,18 @@
+{
+   "PRIVATE_KEY": "1000000000000000000000000000000000000000000000000000000000000000",
+   "DAEMON_LISTENING_PORT": 7018,
+   "DAEMON_END_POINT": "http://54.203.198.53:7018",
+   "ETHEREUM_JSON_RPC_ENDPOINT": "https://kovan.infura.io",
+   "IPFS_END_POINT": "http://ipfs.singularitynet.io:80",
+   "REGISTRY_ADDRESS_KEY": "0x2e4b2f2b72402b9b2d6a7851e37c856c329afe38",
+   "PASSTHROUGH_ENABLED": true,
+   "EXECUTABLE_PATH": "./service/basic_service_one.py",
+   "ORGANIZATION_NAME": "snet",
+   "SERVICE_NAME": "basic-service",
+   "LOG": {
+       "LEVEL": "debug",
+       "OUTPUT": {
+              "TYPE": "stdout"
+           }
+   }
+}
