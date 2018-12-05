@@ -1,0 +1,1 @@
+registry = {"service_name": "example-executable-service"}
