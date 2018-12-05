@@ -43,17 +43,28 @@ class AdditionServicer:
 
 
 if __name__ == "__main__":
-    """
-    Runs the gRPC server to communicate with the Snet Daemon.
-    """
+
     log.debug("Running service.")
-    for line in sys.stdin:
-        log.debug("Input received: {}".format(line))
-        params = json.loads(line)
+
+    # Getting data from stdin
+    #for line in sys.stdin:
+    #while True:
+    #    line = sys.stdin.readline()
+    #    params = json.loads(line)
+    method = sys.argv[1]
+    params = sys.argv[2]
+    log.debug("RECEIVED - Method: {} , Params: {}".format(method, params))
+
+    if method == "add":
+        json_params = json.loads(params)
+
         add_class = AdditionServicer()
+        result = add_class.add(json_params)
+
         return_dict = dict()
-        return_dict["result"] = add_class.add(params)
+        return_dict["result"] = result
         json_return = json.dumps(return_dict)
-        log.debug("Returns".format(json_return))
+        log.debug("Returns {}".format(json_return))
+
         sys.stdout.write(json_return)
         exit(0)
