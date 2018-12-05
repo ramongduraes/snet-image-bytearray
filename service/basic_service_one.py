@@ -4,35 +4,18 @@ import sys
 import json
 import logging
 
-logging.basicConfig(level=10, format="%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
 log = logging.getLogger("basic_template")
-
+fh = logging.FileHandler('executable_service.log')
+formatter = logging.Formatter("%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
+fh.setFormatter(formatter)
+log.addHandler(fh)
+log.setLevel(logging.DEBUG)
+# formatter = logging.basicConfig(level=10, format="%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
 
 """
 Simple arithmetic service to test the Snet Daemon (gRPC), dApp and/or Snet-CLI.
 The user must provide the method (arithmetic operation) and
 two numeric inputs: "a" and "b".
-
-e.g:
-With dApp:  'method': mul
-            'params': {"a": 12.0, "b": 77.0}
-Resulting:  response:
-                value: 924.0
-
-
-Full snet-cli cmd:
-$ snet client call mul '{"a":12.0, "b":77.0}'
-
-Result:
-(Transaction info)
-Signing job...
-
-Read call params from cmdline...
-
-Calling service...
-
-    response:
-        value: 924.0
 """
 
 
@@ -63,13 +46,14 @@ if __name__ == "__main__":
     """
     Runs the gRPC server to communicate with the Snet Daemon.
     """
-    print("Running service.")
+    log.debug("Running service.")
     for line in sys.stdin:
-        print("Received: {}".format(line))
+        log.debug("Input received: {}".format(line))
         params = json.loads(line)
         add_class = AdditionServicer()
         return_dict = dict()
         return_dict["result"] = add_class.add(params)
         json_return = json.dumps(return_dict)
+        log.debug("Returns".format(json_return))
         sys.stdout.write(json_return)
         exit(0)
