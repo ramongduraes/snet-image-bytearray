@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import json
 import logging
@@ -61,11 +63,13 @@ if __name__ == "__main__":
     """
     Runs the gRPC server to communicate with the Snet Daemon.
     """
-
-    params = json.loads(sys.argv[1])
-    add_class = AdditionServicer()
-    return_dict = dict()
-    return_dict["result"] = add_class.add(params)
-    json_return = json.dumps(return_dict)
-    print(json_return)
-    sys.stdout.write(json_return)
+    print("Running service.")
+    for line in sys.stdin:
+        print("Received: {}".format(line))
+        params = json.loads(line)
+        add_class = AdditionServicer()
+        return_dict = dict()
+        return_dict["result"] = add_class.add(params)
+        json_return = json.dumps(return_dict)
+        sys.stdout.write(json_return)
+        exit(0)
