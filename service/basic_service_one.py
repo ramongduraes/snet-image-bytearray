@@ -47,24 +47,25 @@ if __name__ == "__main__":
     log.debug("Running service.")
 
     # Getting data from stdin
-    #for line in sys.stdin:
-    #while True:
+    # for line in sys.stdin:
+    # while True:
     #    line = sys.stdin.readline()
     #    params = json.loads(line)
     method = sys.argv[1]
-    params = sys.argv[2]
-    log.debug("RECEIVED - Method: {} , Params: {}".format(method, params))
+    log.debug("RECEIVED - Method: {}".format(method))
 
     if method == "add":
-        json_params = json.loads(params)
+        log.debug("Method recognized.")
+        for line in sys.stdin:
+            log.debug("STDIN: {}".format(line))
+            json_params = json.loads(line)
+            add_class = AdditionServicer()
+            result = add_class.add(json_params)
 
-        add_class = AdditionServicer()
-        result = add_class.add(json_params)
+            return_dict = dict()
+            return_dict["result"] = result
+            json_return = json.dumps(return_dict)
+            log.debug("Returns {}".format(json_return))
 
-        return_dict = dict()
-        return_dict["result"] = result
-        json_return = json.dumps(return_dict)
-        log.debug("Returns {}".format(json_return))
-
-        sys.stdout.write(json_return)
-        exit(0)
+            sys.stdout.write(json_return)
+            exit(0)
