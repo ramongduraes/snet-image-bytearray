@@ -5,7 +5,7 @@ import json
 import logging
 
 log = logging.getLogger("basic_template")
-fh = logging.FileHandler('executable_service.log')
+fh = logging.FileHandler('./service/executable_service.log')
 formatter = logging.Formatter("%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
 fh.setFormatter(formatter)
 log.addHandler(fh)
@@ -64,9 +64,13 @@ if __name__ == "__main__":
             params = json.loads(input_args)
             add_class = AdditionServicer()
             result = add_class.add(params)
-            return_dict = dict()
-            return_dict["result"] = result
-            json_return = json.dumps(return_dict)
-            log.debug("Returns {}".format(json_return))
-            sys.stdout.write("\'"+json_return+"\'")
+
+            print("{")
+            print("    \"result\": {}".format(str(result)))
+            print("}")
+            #return_dict = dict()
+            #return_dict["result"] = result
+            #json_return = json.dumps(return_dict)
+            #log.debug("Returns: {}".format(json_return))
+            #sys.stdout.write("\'" + json_return + "\'")
         exit(0)
