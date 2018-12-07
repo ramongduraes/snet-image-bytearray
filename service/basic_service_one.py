@@ -68,5 +68,5 @@ if __name__ == "__main__":
             return_dict["result"] = result
             json_return = json.dumps(return_dict)
             log.debug("Returns {}".format(json_return))
-            sys.stdout.write(json_return)
+            sys.stdout.write("\'"+json_return+"\'")
         exit(0)
