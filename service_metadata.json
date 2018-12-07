@@ -1,10 +1,10 @@
 {
     "version": 1,
     "display_name": "example-executable-service",
-    "encoding": "proto",
+    "encoding": "json",
     "service_type": "process",
     "payment_expiration_threshold": 40320,
-    "model_ipfs_hash": "Qme4EYSL7AFSXUZP457WSPQ1bZs8zFqyM7D7ALCB9Cg5Ka",
+    "model_ipfs_hash": "QmXZp3F45zwSCQxVvnnjzvT3LQXwdLkADrGtDuDquVmubk",
     "mpe_address": "0xdd4292864063d0DA1F294AC65D74d55a44F4766C",
     "pricing": {
         "price_model": "fixed_price",
@@ -13,7 +13,7 @@
     "groups": [
         {
             "group_name": "default_group",
-            "group_id": "YVaGdlDLXycr9BkL0R4yFaWIP6bKU+0MDJhUSeNy6tc=",
+            "group_id": "efLtGCSvsLyoqCiZTi/PFQskbZ9qlnLJeLVTM+XqbNg=",
             "payment_address": "0xD416d832F6AE2Ca7d9C7C05f9255Ab49b70c0fe4"
         }
     ],
