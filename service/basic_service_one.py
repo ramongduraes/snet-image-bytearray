@@ -22,7 +22,6 @@ class AdditionServicer:
         self.b = 0
         self.result = 0
         # Just for debugging purpose.
-        print("Addition servicer created.")
         log.debug("AdditionServicer created")
 
     def add(self, arguments):
