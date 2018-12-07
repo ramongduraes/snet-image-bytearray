@@ -5,14 +5,13 @@ import json
 import logging
 
 # Setting up a logger to log to a file.
-# This is extra relevant in the case of a process-type service because since SNET Daemon captures everything that is
-# printed to stdout
+# This is extra relevant in the case of a process-type service because SNET Daemon captures everything that is printed
+# to stdout. If anything different than the json it expects is printed, the service won't return properly.
 log = logging.getLogger("basic_template")
 fh = logging.FileHandler('./service/executable_service.log')
 formatter = logging.Formatter("%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
 fh.setFormatter(formatter)
 log.addHandler(fh)
-
 log.setLevel(logging.DEBUG)
 
 
@@ -39,22 +38,25 @@ class AdditionServicer:
 if __name__ == "__main__":
 
     log.debug("Running service.")
+
+    # Read the method defined in the .proto file from argv.
     method = sys.argv[1]
     log.debug("RECEIVED - Method: {}".format(method))
 
+    #
     if method == "add":
-        log.debug("Method recognized.")
 
         # Read input parameters from stdin
         with sys.stdin:
             input_args = ""
             for line in sys.stdin:
                 input_args += line
-            log.debug("STDIN: {}".format(input_args))
             params = json.loads(input_args)  # Converts from string to python dict
+            log.debug("STDIN: {}".format(input_args))
 
-            add_class = AdditionServicer()
-            result = add_class.add(params)
+            #add_class = AdditionServicer()
+            #result = add_class.add(params)
+            result = params.a + params.b
 
             return_dict = dict()
             return_dict["value"] = result
