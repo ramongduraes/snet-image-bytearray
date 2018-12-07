@@ -65,9 +65,9 @@ if __name__ == "__main__":
             add_class = AdditionServicer()
             result = add_class.add(params)
 
-            print("{")
-            print("    \"result\": {}".format(str(result)))
-            print("}")
+            print("{\n")
+            print("    \"result\": {}\n".format(str(result)))
+            print("}\n")
             #return_dict = dict()
             #return_dict["result"] = result
             #json_return = json.dumps(return_dict)
