@@ -6,61 +6,43 @@ import logging
 
 # Setting up a logger to log to a file.
 # This is extra relevant in the case of a process-type service because SNET Daemon captures everything that is printed
-# to stdout. If anything different than the json it expects is printed, the service won't return properly.
+# to stdout. If anything other than the json it expects is printed, a parsing error will be raised.
 log = logging.getLogger("basic_template")
-fh = logging.FileHandler('./service/executable_service.log')
+file_handler = logging.FileHandler('executable_service.log')
 formatter = logging.Formatter("%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
-fh.setFormatter(formatter)
-log.addHandler(fh)
+file_handler.setFormatter(formatter)
+log.addHandler(file_handler)
 log.setLevel(logging.DEBUG)
 
 
-class AdditionServicer:
-    def __init__(self):
-        self.a = 0
-        self.b = 0
-        self.result = 0
-        # Just for debugging purpose.
-        log.debug("AdditionServicer created")
-
-    def add(self, arguments):
-        # In our case, request is a Numbers() object (from .proto file)
-        self.a = arguments["a"]
-        self.b = arguments["b"]
-
-        # To respond we need to create a Result() object (from .proto file)
-        self.result = self.a + self.b
-
-        log.debug("add({},{})={}".format(self.a, self.b, self.result))
-        return self.result
-
-
 if __name__ == "__main__":
-
     log.debug("Running service.")
 
     # Read the method defined in the .proto file from argv.
     method = sys.argv[1]
     log.debug("RECEIVED - Method: {}".format(method))
 
-    #
     if method == "add":
-
         # Read input parameters from stdin
         with sys.stdin:
             input_args = ""
             for line in sys.stdin:
                 input_args += line
-            params = json.loads(input_args)  # Converts from string to python dict
-            log.debug("STDIN: {}".format(input_args))
+        params = json.loads(input_args)  # Converts from string to python dict
+        log.debug("STDIN: {}".format(input_args))
 
-            #add_class = AdditionServicer()
-            #result = add_class.add(params)
-            result = params["a"] + params["b"]
+        # Add arguments
+        result = params["a"] + params["b"]  # Dictionary key names must match the specifications in .proto.
 
-            return_dict = dict()
-            return_dict["value"] = result
-            json_return = json.dumps(return_dict)
-            log.debug("STDOUT: {}".format(json_return))
-            sys.stdout.write(json_return)
+        # Build the resulting json from a dictionary
+        return_dict = dict()
+        return_dict["value"] = result  # Dictionary key names must match the specifications in .proto.
+        json_return = json.dumps(return_dict)
+
+        # Return the resulting json and exit
+        sys.stdout.write(json_return)
+        log.debug("STDOUT: {}".format(json_return))
         exit(0)
+    else:
+        # This condition will never happen because snet-cli won't allow methods unknown to it (i.e. not in .proto file).
+        exit(1)
