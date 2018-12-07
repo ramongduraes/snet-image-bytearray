@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
             #add_class = AdditionServicer()
             #result = add_class.add(params)
-            result = params.a + params.b
+            result = params["a"] + params["b"]
 
             return_dict = dict()
             return_dict["value"] = result
