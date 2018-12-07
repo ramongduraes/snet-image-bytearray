@@ -28,3 +28,4 @@ snet service publish snet example-executable-service
 python3 basic_service_one.py '{"a":12.0, "b":77.0}'
 
 # add the shebang to the beginning of your executable and change its permissions.
+# make sure not to print anything else to stdout because it'll be read by the daemon

@@ -56,21 +56,25 @@ if __name__ == "__main__":
 
     if method == "add":
         log.debug("Method recognized.")
-        input_args = ""
+
+        # Read input parameters from stdin
         with sys.stdin:
+            input_args = ""
             for line in sys.stdin:
                 input_args += line
             log.debug("STDIN: {}".format(input_args))
             params = json.loads(input_args)
+
             add_class = AdditionServicer()
             result = add_class.add(params)
 
             return_json = "{\n" + "    \"value\": {}\n".format(str(result)) + "}\n"
             sys.stdout.write(return_json)
             log.debug(return_json)
-            #return_dict = dict()
-            #return_dict["result"] = result
-            #json_return = json.dumps(return_dict)
-            #log.debug("Returns: {}".format(json_return))
-            #sys.stdout.write("\'" + json_return + "\'")
+
+            return_dict = dict()
+            return_dict["value"] = result
+            json_return = json.dumps(return_dict)
+            log.debug("STDOUT: {}".format(json_return))
+            sys.stdout.write(json_return)
         exit(0)
