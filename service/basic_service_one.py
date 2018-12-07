@@ -57,8 +57,9 @@ if __name__ == "__main__":
     if method == "add":
         log.debug("Method recognized.")
         with sys.stdin:
-            for line in sys.stdin:
-                log.debug("STDIN: {}".format(line))
+            line = sys.stdin.readline()
+            #for line in sys.stdin:
+            log.debug("STDIN: {}".format(line))
             # json_params = json.loads(line)
             # add_class = AdditionServicer()
             # result = add_class.add(json_params)
