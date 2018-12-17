@@ -10,7 +10,7 @@ SingularityNET is... TODO
 
 Whats a service??? TODO
 
-As an AI service developer, you can expose your service to the SingularityNET by running an instance of SNET Daemon alongside it. The daemon interacts with the blockchain to facilitate authorization and payment for services and acts as a pass-through for making API calls to the service.  There are currently 3 ways by which the Daemon can communicate with a service:
+As an AI service developer, you can expose your service to the SingularityNET by running an instance of SNET Daemon alongside it. The Service Daemon interacts with the blockchain to facilitate authorization and payment for services and acts as a pass-through for making API calls to the service.  There are currently 3 ways by which the Daemon can communicate with a service:
 
 - As an executable/process through stdin and stdout;
 - Using JSON-RPC;
@@ -33,142 +33,10 @@ The main steps of this tutorial are:
 - Written in Python but could be any other language.
 Example of an executable SNET service that communicates with the Daemon through stdin/stdout.
 
-If you're already familiar with SingularityNET and how to create and publish a service that communicate with SNET Daemon through JSON-RPC or gRPC, you can skip to the [Summary](#summary) section.
+If you're already familiar with SingularityNET and how to create and publish a service that communicates with SNET Daemon through JSON-RPC or gRPC, you can skip to the [Summary](#summary) section.
 
 ## 1. Writing the code for your service
 
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
-.
-
-.
 
 
 ## 2. Publishing the service onto SingularityNET
