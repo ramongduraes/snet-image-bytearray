@@ -33,181 +33,147 @@ The main steps of this tutorial are:
 - Written in Python but could be any other language.
 Example of an executable SNET service that communicates with the Daemon through stdin/stdout.
 
-If you're already familiar with SingularityNET and how to create and publish a service that communicate with SNET Daemon through JSON-RPC or gRPC, you can skip to the [Summary](##summary) section.
+If you're already familiar with SingularityNET and how to create and publish a service that communicate with SNET Daemon through JSON-RPC or gRPC, you can skip to the [Summary](#summary) section.
 
 ## 1. Writing the code for your service
 
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
-
 .
 
 .
+.
 
+.
 .
 
 .
+.
 
 .
+.
 
 .
+
 
 ## 2. Publishing the service onto SingularityNET
 
 ## 3. Calling your service
 
-## Summary {#summary}
+## Summary
 
