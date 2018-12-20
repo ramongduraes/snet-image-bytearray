@@ -32,7 +32,9 @@ If you're already familiar with SingularityNET and know how to create, publish a
 
 For this tutorial we'll write an example executable service in [Python](https://www.python.org/) but this approach can be applied to the other programming languages as well.
 
-First, create a directory for your service directory you want to create your service in, create a `service` subdirectory by running
+First, create a directory for your service and a `service` directory inside it.
+
+directory you want to create your service in, create a `service` subdirectory by running
 
 ```bash
 mkdir example_executable_service

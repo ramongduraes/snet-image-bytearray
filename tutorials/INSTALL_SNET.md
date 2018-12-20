@@ -1,3 +1,25 @@
+- Tutorials:
+    - Installing SNET
+    - Uninstalling SNET (maybe inside Installing SNET)
+	
+	- Blockchain, Kovan, Metamask
+	- Creating an Identity
+
+	- Calling a Service
+	- Publishing a Service
+	    - By Daemon-Service Communication
+		    - Executable
+			- JSON-RPC
+			- gRPC
+		- By Programming Language
+			- C++
+			- Go
+			- Java
+			- Python
+		- OpenCog Services (add links to opencog itself)
+
+
+
 # Install SingularityNET
 
 > SNET-Daemon v0.1.4 | SNET-CLI v0.1.9
@@ -186,6 +208,7 @@ You now have a working SingularityNET environment! The commands listed here were
 
 Next: [Set up a session]()
 ___________________
+
 <!---
 ```bash
 #!/usr/bin/env bash
