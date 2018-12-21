@@ -94,3 +94,6 @@ It will prompt you for your private key. Again, don't worry! It is just about as
 create an account = set up your snet session
 after you've installed -> create an account -> identity -> organization -> 
 
+Previous: [BLOCKCHAIN](TODO)
+
+Next: [CALL SERVICE](TODO)
