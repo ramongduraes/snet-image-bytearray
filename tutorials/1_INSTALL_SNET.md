@@ -44,7 +44,9 @@ Because no daemon configuration file was provided, running `snetd` on your termi
   <summary>stuff with *mark* **down**</summary>
   <p>
 <!-- the above p cannot start right at the beginning of the line and is mandatory for everything else to work -->
+
 ##*formatted* **heading** with [a](link)
+
 ```java
 code block
 ```
