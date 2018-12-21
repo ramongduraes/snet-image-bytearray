@@ -1,6 +1,6 @@
 # Set Up a SingularityNET Session
 
-> This tutorial assumes you have SNET CLI installed. If you don't please follow the [Install SNET](TODO) tutorial.
+> This tutorial assumes you have SNET CLI installed. If you don't please follow the [this tutorial](TODO).
 
 You may have noticed that after installing SNET Command Line Interface (CLI), if you try to run commands such as `snet organization list-services ORGANIZATION_ID` (that lists the services registered onto SingularityNET under a particular organization), it will tell you to create an identity: 
 
@@ -18,8 +18,7 @@ The available identity types are:
     - 'trezor' (yields to a required trezor device for signing using a given wallet index)
 ```
 
-An identity 
-- is a local alias for your private key.
+An identity is a local alias for your blockchain keypair private key.
 - you can have several identities
 
 

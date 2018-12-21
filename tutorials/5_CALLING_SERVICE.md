@@ -12,3 +12,15 @@ Explain why its important to be able to call services using the command line (so
 Previous: [IDENTITY](TODO)
 
 Next: [PUBLISH](TODO)
+
+## SNET DApp
+
+
+
+##  SNET CLI
+
+
+
+### Example
+
+super resolution
