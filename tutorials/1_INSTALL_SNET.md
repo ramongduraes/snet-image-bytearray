@@ -15,26 +15,25 @@ Published services are then listed at **SNET Registry**: open and uncensorable r
 This tutorial will guide you through installing SNET Daemon and SNET CLI. 
 
 ## SNET Daemon
-> If you run the following scripts in your system make sure to grant super user access to the commands.
+> If you run the following scripts inside a docker container, please remove the `sudo` commands or install it by running `apt-get install sudo`.
 
-SNET Daemon is available as pre-compiled binaries for Linux and macOS at [Github](https://github.com/singnet/snet-daemon/releases/). The script below installs a few dependencies, sets up a directory for SingularityNET components and downloads SNET Daemon.
+SNET Daemon is available as pre-compiled binaries for Linux and macOS at [Github](https://github.com/singnet/snet-daemon/releases/). The script below installs a few dependencies, downloads SNET Daemon, moves it to the user's bin folder and cleans up.
 
 ```bash
 # Install SNET Daemon dependencies
-apt-get update
-apt-get install -y wget
-
-# Set up directories
-export SINGNET_REPOS=/opt/singnet
-mkdir -p ${SINGNET_REPOS} && \
-cd ${SINGNET_REPOS}
+sudo apt-get update
+sudo apt-get install -y wget
 
 # Install SNET Daemon
-mkdir snet-daemon && \
+sudo mkdir snet-daemon && \
 cd snet-daemon && \
-wget -q https://github.com/singnet/snet-daemon/releases/download/v0.1.4/snetd-0.1.4.tar.gz && \
-tar -xvf snetd-0.1.4.tar.gz && \
-mv ./snetd-0.1.4/snetd-linux-amd64 /usr/bin/snetd
+sudo wget -q https://github.com/singnet/snet-daemon/releases/download/v0.1.4/snetd-0.1.4.tar.gz && \
+sudo tar -xvf snetd-0.1.4.tar.gz && \
+sudo mv ./snetd-0.1.4/snetd-linux-amd64 /usr/bin/snetd
+
+# Delete folder and downloaded files
+cd ..
+sudo rm -rf snet-daemon
 ```
 
 That's it for the daemon installation! Because no daemon configuration file was provided, running `snetd` on your terminal should return:
@@ -45,7 +44,7 @@ That's it for the daemon installation! Because no daemon configuration file was 
   </summary>
   <p>
   
-```bash
+```
 INFO[0000] Cobra initialized                            
 INFO[0000] Configuration file is not set, using default configuration 
 INFO[0000]                                               PaymentChannelStorageServer="&{ID:storage-1 Scheme:http Host:127.0.0.1 ClientPort:2379 PeerPort:2380 Token:unique-token Cluster:storage-1=http://127.0.0.1:2380 StartupTimeout:1m0s Enabled:true DataDir:storage-data-dir-1.etcd LogLevel:info}"
@@ -133,27 +132,22 @@ Here are the main requirements for installing SNET CLI:
 
 Installing SNET CLI requires installing Python3 and specific versions of some of its packages. Since different projects usually share several packages, it is a good practice to set up virtual environments to isolate new projects. Doing that guarantees that the versions of SNET CLI's required packages don't override already existing ones and that new projects dont break your current installation of SNET CLI.
 
-Several tools can be used to create a virtual environment for Python, a very popular example being [Anaconda](TODO). If you already have Anaconda installed, you can create a new environment (e.g. named `singnet`) by running `conda create -n singnet python=3.6`. You can then activate the environment (in Linux and macOS) using `source activate anaconda` and deactivate it by using `source deactivate`. Skip to [SNET CLI installation instructions](#install-snet-cli).
+Several tools can be used to create a virtual environment for Python, a very popular example being [Anaconda](TODO). If you already have Anaconda installed, you can create a new environment (e.g. named `snet`) by running `conda create -n snet python=3.6`. You can then activate the environment (in Linux and macOS) using `source activate snet` and deactivate it by using `source deactivate`. Skip to [SNET CLI installation instructions](#install-snet-cli).
 
 However, if all you want is to have a minimal installation of SNET CLI - as we do for services deployed inside [Docker](TODO) containers, you can simply instal Python3 and use its `virtualenv` package as shown in the steps below.
 
 ### Install General Dependencies
 
-If you haven't already set up SNET directory structure at [SNET Daemon installation steps](#snet-daemon), you should do it by running the script below. It will also install a few of SNET CLI dependencies.
+The script below will also install a few of SNET CLI dependencies.
 
 ```bash
-# Set up directories
-export SINGNET_REPOS=/opt/singnet
-mkdir -p ${SINGNET_REPOS} && \
-cd ${SINGNET_REPOS}
-
 # Install SNET CLI dependencies
-apt-get install -y \
-        git \
-        libudev-dev \
-        libusb-1.0-0-dev \
-        nodejs \
-        npm
+sudo apt-get install -y \
+    git \
+    libudev-dev \
+    libusb-1.0-0-dev \
+    nodejs \
+    npm
 ```
 
 ### Install Python 3
@@ -166,23 +160,28 @@ There are a few things to keep in mind at this step:
 
 ```bash
 # Install Python >= 3.6.5
-apt-get install -y \
-        python3 \
-        python3-pip
+sudo apt-get install -y \
+    python3 \
+    python3-pip
 ```
 
 ### Create a Virtual Environment
 
-Here, we'll install `virtualenv`, create and activate the a virtual environment named `snet_venv` inside $SINGNET_REPOS (`/opt/singnet`, as defined in the Daemon installation steps).
+Here, we'll install `virtualenv`, create and activate a virtual environment named `snet` inside `~/Workspaces` and call that directory `SNET_DIR`.
 
 ```bash
+# Install virtualenv and create one
 pip3 install virtualenv && \
-cd ${SINGNET_REPOS} && \
-virtualenv snet_venv && \ 
-source source snet_venv/bin/activate
+cd ~ && \
+mkdir Workspaces && \
+cd Workspaces && \
+sudo virtualenv snet && \
+source snet/bin/activate
+
+export SNET_DIR=~/Workspaces/snet
 ```
 
-Notice that the name of the environment will appear between parentheses at the beginning of your command line. To deactivate the environment, simples type `deactivate`.
+Notice that the name of the environment will appear between parentheses at the beginning of your command line. To deactivate the environment, simply type `deactivate`.
 
 ### Install SNET CLI
 
@@ -198,7 +197,7 @@ You may now install SNET CLI through `pip` as a developer package by running:
 
 ```bash
 # Install snet-cli
-cd ${SINGNET_REPOS} && \
+cd ${SNET_DIR} && \
 git clone https://github.com/singnet/snet-cli && \
 cd snet-cli && \
 ./scripts/blockchain install && \
@@ -209,13 +208,13 @@ The `snet` command should now be available at your terminal!
 
 <details>
   <summary> 
-    If you have other versions of Python3 installed and have not created a virtual environment for SNET CLI, a common problem may occur. Click here to see how to fix it.
+    If you have other versions of Python3 installed and have not created a virtual environment for SNET CLI, a problem may occur while running `./scripts/blockchain install`. Click here to see how to fix it.
   </summary>
   <p>
   
   While running `./scripts/blockchain install`, make sure it returns:
   
-```bash
+```
 # Blockchain script's return:
 /opt/singnet/snet-cli/blockchain
 +-- singularitynet-platform-contracts@0.2.5 
@@ -234,6 +233,42 @@ If it doesn't, it may be the case that the `blockchain` script is using an inade
 
 Refer to [SNET-CLI](https://github.com/singnet/snet-cli) for further information, including a list of available commands.
 
+## Docker Container Installation Script:
+
+Here's a quick script to install both SNET Daemon and SNET CLI inside a docker container. 
+
+```bash
+# Update
+apt-get update 
+
+# Install SNET Daemon and its dependencies
+apt-get install -y wget && \
+mkdir snet-daemon && \
+cd snet-daemon && \
+wget -q https://github.com/singnet/snet-daemon/releases/download/v0.1.4/snetd-0.1.4.tar.gz && \
+tar -xvf snetd-0.1.4.tar.gz && \
+mv ./snetd-0.1.4/snetd-linux-amd64 /usr/bin/snetd && \
+cd .. && \
+rm -rf snet-daemon
+
+# Install SNET CLI dependencies and Python3.6
+apt-get install -y \
+    git \
+    libudev-dev \
+    libusb-1.0-0-dev \
+    nodejs \
+    npm \
+    python3 \
+    python3-pip
+       
+# Install snet-cli
+cd /opt && \
+git clone https://github.com/singnet/snet-cli && \
+cd snet-cli && \
+./scripts/blockchain install && \
+pip3 install -e .
+```
+
 ## Conclusion
 
 You now have a working SingularityNET environment! The commands listed here were condensed into a [bash script](TODO) as well as a [Dockerfile](TODO).
@@ -242,9 +277,25 @@ Next: [Set up a session](TODO)
 
 ## Uninstall 
 
-To uninstall SNET Daemon, simply delete its precompiled binary. You may uninstall SNET CLI pip:
+To uninstall SNET Daemon, simply delete its precompiled binary. SNET CLI may be uninstalled via pip (make sure your virtual environment is active):
 
 ```bash
-rm /usr/bin/snetd && \
+# Uninstall Daemon
+rm /usr/bin/snetd 
+
+# Uninstall CLI
 pip3 uninstall snet-cli
+```
+
+<!-- 
+TODO: change this once SNET CLI pip is working
+-->
+If you run into the message "Can't uninstall 'snet-cli'. No files were found to uninstall." while trying to uninstall SNET CLI, you can do so by navigating to `snet-cli` folder and running `rm -r $(find . -name '*.egg-info')`. 
+
+```bash
+# Clean up (remove virtual environment and snet-cli files)
+deactivate && \
+cd ${SNET_DIR} && \
+cd .. && \
+rm -rf snet
 ```
