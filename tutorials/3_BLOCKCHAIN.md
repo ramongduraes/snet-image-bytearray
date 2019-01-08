@@ -8,6 +8,10 @@ Briefly mention users interaction with the blockchain, mostly to explain why SNE
 
 Mention Kovan is a test network where everything is free.
 
+## Metamask
+
+Install Metamask extension for Google Chrome 
+Create an account, go to kovan, get the private key
 
 
 Previous: [INSTALL](TODO)

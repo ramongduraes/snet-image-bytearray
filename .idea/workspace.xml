@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a61cfe27-2bae-4bfc-a7e3-dd3a74da7e1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/4_IDENTITY.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/4_IDENTITY.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,32 @@
         <entry file="file://$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="785">
-                <caret line="300" column="3" selection-start-line="300" selection-start-column="3" selection-end-line="300" selection-end-column="3" />
+              <first_editor relative-caret-position="365">
+                <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/4_IDENTITY.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-160">
+                <caret line="17" column="90" lean-forward="true" selection-start-line="17" selection-start-column="90" selection-end-line="17" selection-end-column="90" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="210">
+                <caret line="14" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -40,12 +66,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md" />
+        <option value="$PROJECT_DIR$/tutorials/4_IDENTITY.md" />
         <option value="$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="993" />
+    <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="927" />
     <option name="height" value="1055" />
@@ -103,18 +131,18 @@
       <workItem from="1546624779976" duration="1772000" />
       <workItem from="1546871768416" duration="8613000" />
       <workItem from="1546892243534" duration="620000" />
-      <workItem from="1546959906990" duration="6761000" />
+      <workItem from="1546959906990" duration="11579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17766000" />
+    <option name="totallyTimeSpent" value="22584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="993" y="25" width="927" height="1055" extended-state="4" />
+    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2633371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26220205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -128,7 +156,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32937366" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -141,11 +169,31 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/4_IDENTITY.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-160">
+            <caret line="17" column="90" lean-forward="true" selection-start-line="17" selection-start-column="90" selection-end-line="17" selection-end-column="90" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="785">
-            <caret line="300" column="3" selection-start-line="300" selection-start-column="3" selection-end-line="300" selection-end-column="3" />
+          <first_editor relative-caret-position="365">
+            <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
           </first_editor>
           <second_editor />
         </state>

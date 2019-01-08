@@ -18,7 +18,7 @@ The available identity types are:
     - 'trezor' (yields to a required trezor device for signing using a given wallet index)
 ```
 
-An identity is a local alias for your blockchain keypair private key.
+An identity is a local alias for your blockchain private key.
 - you can have several identities
 
 

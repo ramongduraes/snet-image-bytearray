@@ -277,25 +277,32 @@ Next: [Set up a session](TODO)
 
 ## Uninstall 
 
-To uninstall SNET Daemon, simply delete its precompiled binary. SNET CLI may be uninstalled via pip (make sure your virtual environment is active):
-
-```bash
-# Uninstall Daemon
-rm /usr/bin/snetd 
-
-# Uninstall CLI
-pip3 uninstall snet-cli
-```
+To uninstall SNET Daemon, simply delete its precompiled binary by running `rm /usr/bin/snetd`. SNET CLI may be uninstalled via pip (make sure your virtual environment is active) by running `pip3 uninstall snet-cli`. 
 
 <!-- 
 TODO: change this once SNET CLI pip is working
 -->
-If you run into the message "Can't uninstall 'snet-cli'. No files were found to uninstall." while trying to uninstall SNET CLI, you can do so by navigating to `snet-cli` folder and running `rm -r $(find . -name '*.egg-info')`. 
+
+<details>
+  <summary> 
+    Click here if you run into the message "Can't uninstall 'snet-cli'. No files were found to uninstall.".
+  </summary>
+  <p>
+  This error may occur due to SNET CLI being installed in "editable mode". It also means you probably haven't set up a virtual environment for SNET components or something has gone wrong when using it. 
+  
+  You can uninstall SNET CLI by navigating to its folder (i.e. `snet-cli`, obtained via `git clone`) and running `sudo rm -r $(find . -name '*.egg-info')`. Remove its binaries by running `sudo rm $(which) snet`.
+  
+</p></details>
+
+To clean up your machine (i.e. delete all of SNET files and its virtual environment), run:
 
 ```bash
 # Clean up (remove virtual environment and snet-cli files)
-deactivate && \
+deactivate || \
 cd ${SNET_DIR} && \
 cd .. && \
-rm -rf snet
+rm -rf snet && \
+unset SNET_DIR
 ```
+
+That's it!
