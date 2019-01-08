@@ -1,6 +1,26 @@
+<!--
+- Blockchain
+- Metamask
+- Kovan
+- Faucet
++ SNET Identity
++ SNET Organization
+-->
+
 # Set Up a SingularityNET Session
 
-> This tutorial assumes you have SNET CLI installed. If you don't please follow the [this tutorial](TODO).
+> This tutorial assumes you have SNET CLI installed. If you don't please follow the [this tutorial](TODO). You will also need a private-public key pair to create a SingularityNET identity. You can use [Metamask](https://metamask.io) to generate it before proceeding.
+
+## Creating an Identity
+
+The first step required to run any of SNET CLI's commands is to create an identity. An identity is a local alias for your Blockchain private key that will be used to sign your transactions. 
+
+
+
+
+
+
+
 
 You may have noticed that after installing SNET Command Line Interface (CLI), if you try to run commands such as `snet organization list-services ORGANIZATION_ID` (that lists the services registered onto SingularityNET under a particular organization), it will tell you to create an identity: 
 
@@ -69,6 +89,7 @@ rpc
 mnemonic
 ledger
 trezor
+
 In this tutorial we'll use KEY_TYPE == key. Enter your private key when prompted.
 
 ```bash
@@ -96,3 +117,48 @@ after you've installed -> create an account -> identity -> organization ->
 Previous: [BLOCKCHAIN](TODO)
 
 Next: [CALL SERVICE](TODO)
+
+
+# ARTUR`s TUTORIAL - How to Publish a SingularityNET Service
+
+## Step 2 
+
+From this point we follow the tutorial in the Docker container's prompt.
+
+Create an "alias" for your private key.
+
+```
+# snet identity create MY_ID_NAME KEY_TYPE
+```
+
+Replace `MY_ID_NAME` by an id to identify your key in the `SNET CLI`. 
+This id will not be seen by anyone. 
+It's just a way to make it easier for you to refer to your private key (you may have many, btw) in following `snet` commands. 
+This alias is kept locally in the container and will vanish when it's shutdown. `KEY_TYPE` can be either
+
+* key
+* rpc
+* mnemonic
+* ledger
+* trezor
+
+In this tutorial we'll use `KEY_TYPE` == `key`. Enter your private key when prompted.
+
+## Step 3 (optional if you already have enough AGI and ETH tokens) 
+
+You need some AGI and ETH tokens. You can get then for free using your github account here:
+
+* AGI: https://faucet.singularitynet.io/
+* ETH: https://faucet.kovan.network/
+
+## Step 4 (optional if you already have an organization) 
+
+Create an organization and add your key to it.
+
+```
+# snet organization create ORGANIZATION_NAME
+```
+
+Replace `ORGANIZATION_NAME` by a name of your choice. Make sure you follow our [naming standardisation guidelines][naming-standards].
+
+If you want to join an existing organization (e.g. `snet`), ask the owner to add your public key into it before proceeding.
