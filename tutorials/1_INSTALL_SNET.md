@@ -306,3 +306,7 @@ unset SNET_DIR
 ```
 
 That's it!
+
+___
+
+NEXT: [SET UP A SESSION](TODO)

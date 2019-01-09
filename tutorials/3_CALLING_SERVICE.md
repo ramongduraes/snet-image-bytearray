@@ -1,10 +1,12 @@
 # Calling a Service
 
+MPE
+
 Say that this will mostly be done through SNET DApp (or at least be way easier to accomplish there).
 Explain why its important to be able to call services using the command line (so services can call each other and programmers have a simple API to ) commonly used SNET-Cli commands
 
 - organization list
-- organization list-services
+- organization list-services or snet organization info ORG_ID
 - get service metadata to know what it expects
 - snet client call
 
