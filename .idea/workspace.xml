@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a61cfe27-2bae-4bfc-a7e3-dd3a74da7e1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/4_REGISTER.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/4_REGISTER.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/5_CALLING_SERVICE.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/5_CALLING_SERVICE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorials/5_CLAIM_FUNDS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/3_CALLING_SERVICE.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/3_CALLING_SERVICE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/4_PUBLISHING_SERVICE.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/4_PUBLISHING_SERVICE.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
         <entry file="file://$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="830">
-                <caret line="311" column="16" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
+              <first_editor relative-caret-position="1500">
+                <caret line="130" column="5" lean-forward="true" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -27,11 +28,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorials/4_REGISTER.md">
+        <entry file="file://$PROJECT_DIR$/tutorials/3_CALLING_SERVICE.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="150">
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/4_PUBLISHING_SERVICE.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="740">
-                <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <first_editor relative-caret-position="285">
+                <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/5_CLAIM_FUNDS.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="15">
+                <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
               </first_editor>
               <second_editor />
             </state>
@@ -43,30 +68,6 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorials/5_CALLING_SERVICE.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="14" selection-start-line="14" selection-end-line="14" />
-              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -98,10 +99,13 @@
         <option value="$PROJECT_DIR$/tutorials/5_CALLING_SERVICE.md" />
         <option value="$PROJECT_DIR$/tutorials/4_REGISTER.md" />
         <option value="$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md" />
+        <option value="$PROJECT_DIR$/tutorials/4_PUBLISHING_SERVICE.md" />
+        <option value="$PROJECT_DIR$/tutorials/5_CLAIM_FUNDS.md" />
+        <option value="$PROJECT_DIR$/tutorials/3_CALLING_SERVICE.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="1853" />
@@ -112,7 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,6 +132,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,17 +166,18 @@
       <workItem from="1546892243534" duration="620000" />
       <workItem from="1546959906990" duration="14503000" />
       <workItem from="1547043345052" duration="22894000" />
+      <workItem from="1547130805920" duration="12445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48402000" />
+    <option name="totallyTimeSpent" value="60847000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26452684" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26397344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -199,26 +204,9 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorials/5_CALLING_SERVICE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/3_BLOCKCHAIN.md" />
+    <entry file="file://$PROJECT_DIR$/tutorials/5_CALLING_SERVICE.md" />
+    <entry file="file://$PROJECT_DIR$/tutorials/4_REGISTER.md" />
     <entry file="file://$PROJECT_DIR$/tutorials/ZERO_TO_HERO.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -227,11 +215,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorials/4_REGISTER.md">
+    <entry file="file://$PROJECT_DIR$/tutorials/5_CLAIM_FUNDS.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/4_PUBLISHING_SERVICE.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="740">
-            <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <first_editor relative-caret-position="285">
+            <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/3_CALLING_SERVICE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="150">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
           </first_editor>
           <second_editor />
         </state>
@@ -240,8 +248,8 @@
     <entry file="file://$PROJECT_DIR$/tutorials/1_INSTALL_SNET.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="830">
-            <caret line="311" column="16" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
+          <first_editor relative-caret-position="1500">
+            <caret line="130" column="5" lean-forward="true" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
