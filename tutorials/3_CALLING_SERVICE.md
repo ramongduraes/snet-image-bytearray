@@ -2,19 +2,23 @@
 
 > This tutorial assumes you have successfully [installed](TODO) and [set up](TODO) SNET CLI.
 
-Calling an AI service will mostly be done through our soon to be released [SNET DApp](TODO): 
+Calling an AI service will mostly be done through our soon to be released [SNET DApp](TODO): a marketplace for exploring available AI services and interacting with them through a web-UI. However, if you're an AI developer interested in publishing a service, you should probably know how to call it through SNET's Command Line Interface so that you can test your service back-end independently. It is also useful in case you plan on creating a service that interacts with other services.
 
-WHY CALL THROUGH CLI
+TODO: MPE here
 
-1) Mostly through DApp, explain DApp
+## Finding Information about Organizations and Services
+
+Having installed SNET CLI and set up a session, you may now access the list of organization IDs in SNET's Registry by running `snet organization list`. Once you find an organization of interest, you may view further information about it through `snet organization info ORG_ID`, including its name, the public keys of its owner and members and a list of all its services. If you're only interested in the list of services, you can view that using `snet organization list-services ORG_ID`.
+
+Once you have decided on the organization and service of interest, another useful command is `snet service print-metadata ORG_ID SERVICE_ID`. That will print to terminal some off-chain information related to the service. For this tutorial, the most relevant information is the service's endpoint.
+
+## 
 
 2) SNET CLI Organizations, list, etc
 
 Say that this will mostly be done through SNET DApp (or at least be way easier to accomplish there).
 Explain why its important to be able to call services using the command line (so services can call each other and programmers have a simple API to ) commonly used SNET-Cli commands
 
-- organization list
-- organization list-services or snet organization info ORG_ID
 - get service metadata to know what it expects
 - snet client call
 
@@ -28,15 +32,12 @@ Previous: [IDENTITY](TODO)
 Next: [PUBLISH](TODO)
 
 ___ 
+
 # DRAFT
 
 MPE : A smart contract that facilitates transactions between users and AI service developers. It provides a wallet functionality (deposit and withdraw funds) as well as uni-directional payment channels between users and AI service developers enabling users to pay for service invocations
 
 REFER TO: [Using the SNET-CLI to pass parameters to a service](https://dev.singularitynet.io/docs/all/mpe/snet-cli/)
-
-##  SNET CLI
-
-
 
 ### Example
 
