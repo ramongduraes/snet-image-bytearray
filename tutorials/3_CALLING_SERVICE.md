@@ -17,7 +17,6 @@ Once you have decided on the organization and service of interest, another usefu
 2) SNET CLI Organizations, list, etc
 
 Say that this will mostly be done through SNET DApp (or at least be way easier to accomplish there).
-Explain why its important to be able to call services using the command line (so services can call each other and programmers have a simple API to ) commonly used SNET-Cli commands
 
 - get service metadata to know what it expects
 - snet client call
