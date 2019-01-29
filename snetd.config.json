@@ -1,14 +1,15 @@
 {
-   "PRIVATE_KEY": "1000000000000000000000000000000000000000000000000000000000000000",
-   "DAEMON_LISTENING_PORT": 7018,
    "DAEMON_END_POINT": "http://54.203.198.53:7018",
    "ETHEREUM_JSON_RPC_ENDPOINT": "https://kovan.infura.io",
    "IPFS_END_POINT": "http://ipfs.singularitynet.io:80",
    "REGISTRY_ADDRESS_KEY": "0xe331bf20044a5b24c1a744abc90c1fd711d2c08d",
    "PASSTHROUGH_ENABLED": true,
    "EXECUTABLE_PATH": "./service/example-executable-service.py",
-   "ORGANIZATION_NAME": "ramonduraes",
-   "SERVICE_NAME": "example-executable-service",
+   "ORGANIZATION_ID": "ramonduraes",
+   "SERVICE_ID": "example-executable-service",
+   "PAYMENT_CHANNEL_STORAGE_SERVER": {
+       "DATA_DIR": "/opt/singnet/etcd/"
+   },
    "LOG": {
        "LEVEL": "debug",
        "OUTPUT": {
