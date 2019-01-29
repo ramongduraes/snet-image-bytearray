@@ -1,6 +1,6 @@
-snet service metadata_init service/service_spec example-executable-service 0xD416d832F6AE2Ca7d9C7C05f9255Ab49b70c0fe4 --service_type process
-snet service metadata_set_fixed_price 0
-snet service metadata_add_endpoints http://54.203.198.53:7018
+snet service metadata-init service/service_spec example-executable-service 0xD416d832F6AE2Ca7d9C7C05f9255Ab49b70c0fe4 --service-type process
+snet service metadata-set-fixed-price 0
+snet service metadata-add-endpoints http://54.203.198.53:7018
 snet service publish snet example-executable-service
 
 # Create snetd.config.json file on the root directory of the service:

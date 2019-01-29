@@ -4,10 +4,10 @@
    "DAEMON_END_POINT": "http://54.203.198.53:7018",
    "ETHEREUM_JSON_RPC_ENDPOINT": "https://kovan.infura.io",
    "IPFS_END_POINT": "http://ipfs.singularitynet.io:80",
-   "REGISTRY_ADDRESS_KEY": "0x2e4b2f2b72402b9b2d6a7851e37c856c329afe38",
+   "REGISTRY_ADDRESS_KEY": "0xe331bf20044a5b24c1a744abc90c1fd711d2c08d",
    "PASSTHROUGH_ENABLED": true,
-   "EXECUTABLE_PATH": "./service/basic_service_one.py",
-   "ORGANIZATION_NAME": "snet",
+   "EXECUTABLE_PATH": "./service/example-executable-service.py",
+   "ORGANIZATION_NAME": "ramonduraes",
    "SERVICE_NAME": "example-executable-service",
    "LOG": {
        "LEVEL": "debug",
