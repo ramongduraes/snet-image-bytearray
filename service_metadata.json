@@ -1,7 +1,7 @@
 {
     "version": 1,
     "display_name": "example-executable-service",
-    "encoding": "proto",
+    "encoding": "json",
     "service_type": "process",
     "payment_expiration_threshold": 40320,
     "model_ipfs_hash": "QmUW63oG2RX6e84kWSH6yLzXKtvrhcT4QUNLfvxHDq3Y7X",
