@@ -1,6 +1,4 @@
-snet service metadata-init service/service_spec example-executable-service 0xD416d832F6AE2Ca7d9C7C05f9255Ab49b70c0fe4 --service-type process
-snet service metadata-set-fixed-price 0
-snet service metadata-add-endpoints http://54.203.198.53:7018
+snet service metadata-init service/service_spec example-executable-service 0xD416d832F6AE2Ca7d9C7C05f9255Ab49b70c0fe4 --endpoints http://54.203.198.53:7018 --service-type process --encoding json --fixed-price 0
 snet service publish snet example-executable-service
 
 # Create snetd.config.json file on the root directory of the service:
@@ -44,10 +42,13 @@ snet channel open-init ramonduraes example-executable-service 0 11226466
 snet channel print-initialized
 # call the service
 snet client call 351 0 54.203.198.53:7018 add '{"a": 6.3, "b": 13.2}'
+# response
+unspent_amount_in_cogs before call (None means that we cannot get it now):0
+value: 19.5
 
 
 
 # WORKS LOCALLY WHEN RUNNING
 ./service/example-executable-service.py add <<< '{"a":2.3 ,"b":2.1}'
-# BUT NOT WHEN RUNNING
-./service/example-executable-service.py add <<< '{"a":2.3 ,"b":2.1}'
+
+# SNET SERVICE METADATA SET MODEL : atualiza só o protobuf e o IPFS
