@@ -44,3 +44,10 @@ snet channel open-init ramonduraes example-executable-service 0 11226466
 snet channel print-initialized
 # call the service
 snet client call 338 0 54.203.198.53:7018 add '{"a": 6.3, "b": 13.2}'
+
+
+
+# WORKS LOCALLY WHEN RUNNING
+./service/example-executable-service.py add <<< '{"a":2.3 ,"b":2.1}'
+# BUT NOT WHEN RUNNING
+./service/example-executable-service.py add <<< '{"a":2.3 ,"b":2.1}'

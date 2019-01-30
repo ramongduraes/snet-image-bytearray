@@ -22,13 +22,20 @@ if __name__ == "__main__":
     method = sys.argv[1]
     log.debug("RECEIVED - Method: {}".format(method))
 
+    print(sys.argv)
+
     if method == "add":
-        # Read input parameters from stdin and converts from string to python dict
-        parameters = json.loads(sys.argv[2])
-        log.debug("RECEIVED - Parameters: {}".format(parameters))
+        # Read input parameters from stdin
+        with sys.stdin:
+            input_args = ""
+            for line in sys.stdin:
+                log.debug("RECEIVED - Stdin: {}". format(line))
+                input_args += line
+        params = json.loads(input_args)  # Converts from string to python dict
+        log.debug("STDIN: {}".format(input_args))
 
         # Add arguments
-        result = parameters["a"] + parameters["b"]  # Dictionary key names must match the specifications in .proto.
+        result = params["a"] + params["b"]  # Dictionary key names must match the specifications in .proto.
 
         # Build the resulting json from a dictionary
         return_dict = dict()
@@ -40,6 +47,23 @@ if __name__ == "__main__":
         log.debug("STDOUT: {}".format(json_return))
         exit(0)
 
+        # # Second Try
+        # # Read input parameters from stdin and converts from string to python dict
+        # parameters = json.loads(sys.argv[2])
+        # log.debug("RECEIVED - Parameters: {}".format(parameters))
+        #
+        # # Add arguments
+        # result = parameters["a"] + parameters["b"]  # Dictionary key names must match the specifications in .proto.
+        #
+        # # Build the resulting json from a dictionary
+        # return_dict = dict()
+        # return_dict["value"] = result  # Dictionary key names must match the specifications in .proto.
+        # json_return = json.dumps(return_dict)
+        #
+        # # Return the resulting json and exit
+        # sys.stdout.write(json_return)
+        # log.debug("STDOUT: {}".format(json_return))
+        # exit(0)
     else:
         # This condition will never happen because snet-cli won't allow methods unknown to it (i.e. not in .proto file).
         exit(1)
