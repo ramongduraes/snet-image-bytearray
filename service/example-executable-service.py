@@ -23,7 +23,8 @@ if __name__ == "__main__":
     log.debug("RECEIVED - Method: {}".format(method))
 
     log.debug("RECEIVED - ARGV: {}".format(sys.argv))
-    log.debug("RECEIVED - STDIN: {}".format(sys.stdin))
+    for line in sys.stdin:
+        log.debug("RECEIVED - Stdin: {}".format(line))
 
     if method == "add":
         # Read input parameters from stdin
