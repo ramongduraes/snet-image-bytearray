@@ -43,7 +43,7 @@ snet channel open-init ramonduraes example-executable-service 0 11226466
 # get channel id
 snet channel print-initialized
 # call the service
-snet client call 338 0 54.203.198.53:7018 add '{"a": 6.3, "b": 13.2}'
+snet client call 351 0 54.203.198.53:7018 add '{"a": 6.3, "b": 13.2}'
 
 
 

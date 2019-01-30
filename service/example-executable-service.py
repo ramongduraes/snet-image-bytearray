@@ -22,13 +22,6 @@ if __name__ == "__main__":
     method = sys.argv[1]
     log.debug("RECEIVED - Method: {}".format(method))
 
-    log.debug("RECEIVED - ARGV: {}".format(sys.argv))
-    while True:
-        line = sys.stdin.readline()
-        if not line:
-            break
-        log.debug("RECEIVED - Stdin: {}". format(line))
-
     if method == "add":
         # Read input parameters from stdin
         with sys.stdin:
@@ -52,23 +45,6 @@ if __name__ == "__main__":
         log.debug("STDOUT: {}".format(json_return))
         exit(0)
 
-        # # Second Try
-        # # Read input parameters from stdin and converts from string to python dict
-        # parameters = json.loads(sys.argv[2])
-        # log.debug("RECEIVED - Parameters: {}".format(parameters))
-        #
-        # # Add arguments
-        # result = parameters["a"] + parameters["b"]  # Dictionary key names must match the specifications in .proto.
-        #
-        # # Build the resulting json from a dictionary
-        # return_dict = dict()
-        # return_dict["value"] = result  # Dictionary key names must match the specifications in .proto.
-        # json_return = json.dumps(return_dict)
-        #
-        # # Return the resulting json and exit
-        # sys.stdout.write(json_return)
-        # log.debug("STDOUT: {}".format(json_return))
-        # exit(0)
     else:
         # This condition will never happen because snet-cli won't allow methods unknown to it (i.e. not in .proto file).
         exit(1)
