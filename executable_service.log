@@ -1,0 +1,40 @@
+2019-01-29 22:11:38,704 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:11:38,704 - [   DEBUG] - basic_template - RECEIVED - Method: {"a":2.3 ,"b":2.1}
+2019-01-29 22:11:42,851 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:11:42,852 - [   DEBUG] - basic_template - RECEIVED - Method: ad
+2019-01-29 22:11:46,113 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:11:46,113 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:12:30,526 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:12:30,526 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:12:42,530 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:12:42,530 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:38:56,762 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:38:56,762 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:38:57,902 - [   DEBUG] - basic_template - RECEIVED - Stdin: 
+
+2019-01-29 22:39:17,091 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:39:17,091 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:39:56,078 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:39:56,078 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:40:42,672 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:40:42,672 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:43:28,388 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:43:28,388 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:45:23,782 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:45:23,782 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:46:52,405 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:46:52,405 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:47:11,807 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:47:11,807 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:47:19,799 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:47:19,799 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:47:44,555 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:47:44,555 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:47:44,556 - [   DEBUG] - basic_template - STDOUT: {"value": 4.4}
+2019-01-29 22:49:38,301 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:49:38,301 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:49:38,301 - [   DEBUG] - basic_template - STDOUT: {"value": 4.4}
+2019-01-29 22:50:10,808 - [   DEBUG] - basic_template - Running service.
+2019-01-29 22:50:10,808 - [   DEBUG] - basic_template - RECEIVED - Method: add
+2019-01-29 22:50:10,808 - [   DEBUG] - basic_template - RECEIVED - Parameters: {'a': 2.3, 'b': 2.1}
+2019-01-29 22:50:10,808 - [   DEBUG] - basic_template - STDOUT: {"value": 4.4}
