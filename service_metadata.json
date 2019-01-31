@@ -7,14 +7,14 @@
     "model_ipfs_hash": "QmUW63oG2RX6e84kWSH6yLzXKtvrhcT4QUNLfvxHDq3Y7X",
     "mpe_address": "0x39f31Ac7B393fE2C6660b95b878FEB16eA8f3156",
     "pricing": {
-       "price_model": "fixed_price",
-       "price_in_cogs": 0
-   },
+        "price_model": "fixed_price",
+        "price_in_cogs": 0
+    },
     "groups": [
         {
             "group_name": "default_group",
-            "group_id": "9Z5VigBPqcIOtVwbCFyos5aLk9iNXD8aZAfAdmen2aU=",
-            "payment_address": "0xCEb196e0236C5B4EE62d5C87692284FBd52fCBD0"
+            "group_id": "Vm/BlYMnmd6+nXaGjJx0UxpsYBaZNRv+1gj4X6bnpFQ=",
+            "payment_address": "0xD416d832F6AE2Ca7d9C7C05f9255Ab49b70c0fe4"
         }
     ],
     "endpoints": [
