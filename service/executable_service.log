@@ -1,7 +1,0 @@
-2019-01-30 14:54:55,563 - [   DEBUG] - basic_template - Running service.
-2019-01-30 14:54:55,563 - [   DEBUG] - basic_template - RECEIVED - Method: add
-2019-01-30 14:54:55,563 - [   DEBUG] - basic_template - RECEIVED - Stdin: {"a": 2.1, "b":6.7}
-
-2019-01-30 14:54:55,563 - [   DEBUG] - basic_template - STDIN: {"a": 2.1, "b":6.7}
-
-2019-01-30 14:54:55,563 - [   DEBUG] - basic_template - STDOUT: {"value": 8.8}

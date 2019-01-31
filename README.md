@@ -70,7 +70,6 @@ if __name__ == "__main__":
         with sys.stdin:
             input_args = ""
             for line in sys.stdin:
-                log.debug("RECEIVED - Stdin: {}". format(line))
                 input_args += line
         params = json.loads(input_args)  # Converts from string to python dict
         log.debug("STDIN: {}".format(input_args))
